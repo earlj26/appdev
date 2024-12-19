@@ -16,13 +16,13 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
             <!-- Logo on the left side -->
-            <a href="#" class="navbar-brand mb-01 h1">Navbar</a>
+            <a href="dashboard.html" class="navbar-brand mb-01 h1">Navbar</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Centered menu items -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link">Men</a>
+                        <a href="men.html" class="nav-link">Men</a>
                     </li>
                     <li class="nav-item active">
                         <a href="#" class="nav-link">Women</a>
@@ -60,52 +60,58 @@
         </form>
       </div>
       </div>
+      
       <!-- Carousel ni sya-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="Pictures/clothes.jpg" alt="Image 1">
+            <img src="pictures/clothes.jpg" alt="Image 1">
           </div>
           <div class="carousel-item">
-            <img src="Pictures/Sale.png" alt="Image 2">
-          </div>
+            <img src="pictures/Sale.png" alt="Image 2">
+          </div>    
           <div class="carousel-item">
-            <img src="Pictures/SaleSale.png" alt="Image 3">
+            <img src="pictures/SaleSale.png" alt="Image 3">
           </div>
         </div>
       </div>
 
-<div class="container mt-4">
-  <div class="row">
-    <!-- feature1 -->
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          <h5 class="card-title">Best Outfit of the season</h5>
-          <p class="card-text">Find out what's the best for the season</p>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="pictures/g3.png" class="card-img-top" alt="Product 1">
+              <div class="card-body">
+                <h5 class="card-title">Tis the season to be jolly</h5>
+                <p class="card-text">Give your friends or family a good gifts!</p>
+                <button class="btn btn-outline-warning">View Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="pictures/g1.png" class="card-img-top" alt="Product 2">
+              <div class="card-body">
+                <h5 class="card-title">60% off SALE for all Winter products!</h5>
+                <p class="card-text">Buy now or regret it later</p>
+                <button class="btn btn-outline-warning">View Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="pictures/g2.png" class="card-img-top" alt="Product 3">
+              <div class="card-body">
+                <h5 class="card-title">Crazy deals!</h5>
+                <p class="card-text">Check out some CRAZY deals now!</p>
+                <button class="btn btn-outline-warning">View Details</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- feature2 -->
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          <h5 class="card-title">T-Shirt Below 500 pesos!</h5>
-          <p class="card-text">Buy more save more</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    <!-- feature3 -->
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body text-center">
-          <h5 class="card-title">Christmas Sale!</h5>
-          <p class="card-text">Tis the season to be jolly</p>
-        </div>
-      </div>
-    </div>
-  
+      
+      
 </div>
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
