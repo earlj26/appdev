@@ -1,76 +1,87 @@
-.navbar-nav .nav-link {
-    position: relative;
-    text-decoration: none; /* Removes underline from links */
-    color: inherit; /* Inherits color for flexible theming */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hover state: change link color */
-.navbar-nav .nav-link:hover {
-    color: #007bff; /* Bootstrap primary color */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Decorative underline effect */
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Positions underline below the text */
-    left: 0;
-    width: 0; /* Initially hidden */
-    height: 2px; /* Thickness of the underline */
-    background-color: #ffee00; /* Bright yellow underline color */
-    transition: width 0.3s ease; /* Smooth expansion effect */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
 }
 
-/* Expand underline on hover */
-.navbar-nav .nav-link:hover::after {
-    width: 100%; /* Fully underline the link */
-}
-.product-link {
-    text-decoration: none; /* Remove underline from links */
-    display: block; /* Ensure the card is clickable */
-}
-
-.product-link:hover .card {
-    border: 2px solid #ffc107; /* Warning color outline */
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.6); /* Subtle shadow effect */
-    transition: box-shadow 0.3s ease, border 0.3s ease; /* Smooth transition */
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
 }
 
-/* Optionally, you can also change the card image opacity when hovering */
-.product-link:hover .card-img-top {
-    opacity: 0.8; /* Slightly fade image on hover */
+.product img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Card body text color change on hover */
-.product-link:hover .card-body h5,
-.product-link:hover .card-body p {
-    color: #007bff; /* Highlight text in blue on hover */
-}
-.product-link {
-    text-decoration: none; /* Remove underline from links */
-    display: block; /* Ensure the card is clickable */
+.product h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
 }
 
-/* Product image border for emphasis */
-.product-image {
-    border: px solid black; /* Black border around the product image */
-    transition: border 0.3s ease; /* Smooth border transition */
+.product p {
+    font-size: 1rem;
+    color: #666;
 }
 
-/* Hover effect */
-.product-link:hover .card {
-    border: 2px solid #ffc107; /* Warning color outline */
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.6); /* Subtle shadow effect */
+.product .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
 }
 
-/* Optionally, you can also change the card image opacity when hovering */
-.product-link:hover .product-image {
-    opacity: 0.8; /* Slightly fade image on hover */
+.product .button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
-/* Card body text color change on hover */
-.product-link:hover .card-body h5,
-.product-link:hover .card-body p {
-    color: #007bff; /* Highlight text in blue on hover */
+.product .button:hover {
+    background-color: #2980b9;
+}
+
+@media screen and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
 }
