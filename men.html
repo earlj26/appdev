@@ -1,206 +1,105 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="men.css">
-
-    <title>Hello, Men!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard</title>
+    <style>
+      .card-img-top {
+        width: 100%;
+        height: 400px;
+        object-fit: cover; 
+      }
+      .card-body {
+        padding: 1rem;
+      }
+      .card {
+        max-width: 300px; 
+        margin: auto; 
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div id="loading-screen">
+      <div class="loader"></div>
+      <p>Please wait as we restock the shop for you...</p>
+    </div>
+    <div id="dashboard" style="display:none;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <!-- Logo on the left side -->
-            <a href="dashboard.html" class="navbar-brand">Navbar</a>
-
-            <!-- Toggler button for mobile view -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="dashboard.html">Prime Nest</a>
+          <div class="mx-auto">
+            <ul class="navbar-nav d-flex justify-content-center">
+              <li class="nav-item"><a class="nav-link" href="men.html">Men</a></li>
+              <li class="nav-item"><a class="nav-link" href="men.html">Women</a></li>
+              <li class="nav-item"><a class="nav-link" href="productoverview.html">Cart</a></li>
+              <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+            </ul>
+          </div>
+          <div class="ms-auto d-flex align-items-center">
+            <button class="btn btn-outline-secondary me-2" id="searchIcon" data-bs-toggle="collapse" data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox">
+              <i class="bi bi-search"></i>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Centered menu items -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Men</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Women</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Footwear</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Accessories</a>
-                    </li>
-                </ul>
-
-                <!-- Right-aligned items -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contact us</a>
-                    </li>
-                </ul>
+            <div class="collapse" id="searchBox">
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
             </div>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact Us</a></li>
+          </ul>
         </div>
-    </nav>
-
-    <div>
-      <div class="container py-5">
-      <!-- 9 rows with 4 columns each -->
-      <div class="row g-4">
-        <!-- Row 1 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
+      </nav>
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Shop Our Collection</h2>
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+          <div class="col">
+            <a href="productoverview.html" class="text-decoration-none">
+              <div class="card h-100">
+                <img src="pictures/m1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body text-center">
+                  <h5 class="card-title text-warning">Carhartt Jacket</h5>
+                  <p class="card-text text-warning">3000 PHP</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="productoverview.html" class="text-decoration-none">
             <div class="card h-100">
-              <img src="pictures/men1.png" class="card-img-top product-image" alt="Product 1">
+              <img src="pictures/m2.png" class="card-img-top" alt="Product 1">
               <div class="card-body text-center">
-                <h5 class="card-title">Product 1</h5>
-                <p class="card-text">$49.99</p>
+                <h5 class="card-title text-warning">Carhartt Vest</h5>
+                <p class="card-text text-warning">2000PHP</p>
               </div>
             </div>
           </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
+          <a href="productoverview.html" class="text-decoration-none">
             <div class="card h-100">
-              <img src="product2.jpg" class="card-img-top product-image" alt="Product 2">
+              <img src="pictures/m3.jpg" class="card-img-top" alt="Product 1">
               <div class="card-body text-center">
-                <h5 class="card-title">Product 2</h5>
-                <p class="card-text">$39.99</p>
+                <h5 class="card-title text-warning">Carhartt Rain Vest</h5>
+                <p class="card-text text-warning">2499PHP</p>
               </div>
             </div>
           </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
+          <a href="productoverview.html" class="text-decoration-none">
             <div class="card h-100">
-              <img src="product3.jpg" class="card-img-top product-image" alt="Product 3">
+              <img src="pictures/m4.png" class="card-img-top" alt="Product 1">
               <div class="card-body text-center">
-                <h5 class="card-title">Product 3</h5>
-                <p class="card-text">$59.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product4.jpg" class="card-img-top product-image" alt="Product 4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 4</h5>
-                <p class="card-text">$29.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product5.jpg" class="card-img-top product-image" alt="Product 5">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 5</h5>
-                <p class="card-text">$19.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product6.jpg" class="card-img-top product-image" alt="Product 6">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 6</h5>
-                <p class="card-text">$24.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product7.jpg" class="card-img-top product-image" alt="Product 7">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 7</h5>
-                <p class="card-text">$34.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product8.jpg" class="card-img-top product-image" alt="Product 8">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 8</h5>
-                <p class="card-text">$44.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Row 3 (and further rows can follow the same structure) -->
-        <!-- Row 3 -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product33.jpg" class="card-img-top product-image" alt="Product 33">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 33</h5>
-                <p class="card-text">$25.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product34.jpg" class="card-img-top product-image" alt="Product 34">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 34</h5>
-                <p class="card-text">$35.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product35.jpg" class="card-img-top product-image" alt="Product 35">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 35</h5>
-                <p class="card-text">$45.99</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="#" class="product-link">
-            <div class="card h-100">
-              <img src="product36.jpg" class="card-img-top product-image" alt="Product 36">
-              <div class="card-body text-center">
-                <h5 class="card-title">Product 36</h5>
-                <p class="card-text">$55.99</p>
+                <h5 class="card-title text-warning">Carhartt Coat</h5>
+                <p class="card-text text-warning">5000PHP</p>
               </div>
             </div>
           </a>
         </div>
       </div>
     </div>
-    </div>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFyHlKOcLVEKJ8DhYMB7Kf27Nx0z2bHmgG2t4Pp8UczvCJCqcI7Hhe6EOM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>
