@@ -12,46 +12,67 @@
     
   </head>
   <body>
+    <div id="loading-screen">
+      <div class="loader"></div>
+      <p>Please wait as we restock the shop for you...</p>
+  </div>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="container-fluid">
-            <!-- Logo on the left side -->
-            <a href="dashboard.html" class="navbar-brand mb-01 h1">Navbar</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Navbar Brand -->
+    <a class="navbar-brand" href="#">prime nest</a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Centered menu items -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
-                        <a href="men.html" class="nav-link">Men</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Women</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Footwear</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Accessories</a>
-                    </li>
-                </ul>
 
-                <!-- Right-aligned items -->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div>
-        
-        
+    <div class="mx-auto">
+      <ul class="navbar-nav d-flex justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Footwear</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Accessories</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ari paggid google ni hehehe -->
+    <div class="ms-auto d-flex align-items-center">
+      <!-- gin google ko lang ni wahaha magnifying glass -->
+      <button class="btn btn-outline-secondary me-2" id="searchIcon" data-bs-toggle="collapse" data-bs-target="#searchBox" aria-expanded="false" aria-controls="searchBox">
+        <i class="bi bi-search"></i>
+      </button>
+
+    
+      <div class="collapse" id="searchBox">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+  
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    
+    
+       
     <!-- //search bar guys// -->
-    <div class="container d-flex justify-content-center" style="margin-top: 15vh;">
+    <!-- <div class="container d-flex justify-content-center" style="margin-top: 15vh;">
         <form class="w-50">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search here..." aria-label="Search">
@@ -59,19 +80,24 @@
           </div>
         </form>
       </div>
-      </div>
+      </div> -->
+
+      
       
       <!-- Carousel ni sya-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="pictures/clothes.jpg" alt="Image 1">
+            <img src="pictures/promo.png" alt="Image 1">
           </div>
           <div class="carousel-item">
             <img src="pictures/Sale.png" alt="Image 2">
           </div>    
           <div class="carousel-item">
-            <img src="pictures/SaleSale.png" alt="Image 3">
+            <img src="pictures/CLAIM.png" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="pictures/shopname.png" alt="Image 4">
           </div>
         </div>
       </div>
@@ -80,7 +106,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card product-card">
-              <img src="pictures/g3.png" class="card-img-top" alt="Product 1">
+              <img src="pictures/And Happy New Year (1).png" class="card-img-top" alt="Product 1">
               <div class="card-body">
                 <h5 class="card-title">Tis the season to be jolly</h5>
                 <p class="card-text">Give your friends or family a good gifts!</p>
@@ -90,7 +116,7 @@
           </div>
           <div class="col-md-4">
             <div class="card product-card">
-              <img src="pictures/g1.png" class="card-img-top" alt="Product 2">
+              <img src="pictures/girl.png" class="card-img-top" alt="Product 2">
               <div class="card-body">
                 <h5 class="card-title">60% off SALE for all Winter products!</h5>
                 <p class="card-text">Buy now or regret it later</p>
@@ -100,7 +126,7 @@
           </div>
           <div class="col-md-4">
             <div class="card product-card">
-              <img src="pictures/g2.png" class="card-img-top" alt="Product 3">
+              <img src="pictures/boy.png" class="card-img-top" alt="Product 3">
               <div class="card-body">
                 <h5 class="card-title">Crazy deals!</h5>
                 <p class="card-text">Check out some CRAZY deals now!</p>
@@ -110,10 +136,26 @@
           </div>
         </div>
       </div>
+
+
+      <div class="row mt-5">
+        <div class="col-12 text-center" id="examplescheck">
+          <img src="pictures/belowcardzz.png" class="img-fluid" alt="choose1">
+          <div class="buttons-container">
+            <button class="btn btn-primary rounded-pill">Men</button>
+            <button class="btn btn-secondary rounded-pill">Women</button>
+          </div>
+        </div>
+      </div>
       
+    
       
 </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+    
+    <script src="searchbarandlanding.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
