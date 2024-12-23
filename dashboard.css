@@ -321,27 +321,9 @@ body {
     transform: translateX(-50%);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-    
-    
-    
-
-  
-
+body.no-scroll {
+  overflow: hidden;
+}
   
     
     
